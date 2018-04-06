@@ -1,0 +1,154 @@
+{
+  "pi": {
+    "name": "WoT Pi",
+    "description": "WoT connected RPI, reading sensors: pressure, humidity, temperature, and luminosity",
+    "port": 8000,
+    "resources": {
+      "temperature": {
+        "_links": {
+          "self": "/pi/resources/temperature",
+          "resources": "/pi/resources"
+        },
+        "name": "temperature sensor",
+        "description": "Temperature sensor, measured in celsius",
+        "unit": "celcius",
+        "value": 0,
+        "gpio": 4,
+        "_embedded": {
+          "sensors": {
+            "humidity": {
+              "name": "humidity sensor",
+              "unit": "%",
+              "_links": {
+                "self": "/pi/resources/humidity"
+              }
+            },
+            "pressure": {
+              "name": "pressure sensor",
+              "unit": "hPa",
+              "_links": {
+                "self": "/pi/resources/pressure"
+              }
+            },
+            "lux": {
+              "name": "luminosity sensor",
+              "unit": "lux",
+              "_links": {
+                "self": "/pi/resources/lux"
+              }
+            }
+
+          }
+        }
+      },
+      "humidity": {
+        "_links": {
+          "self": "/pi/resources/humidity",
+          "resources": "/pi/resources"
+        },
+        "name": "humidity sensor",
+        "description": "A humidity sensor, measured in %",
+        "unit": "%",
+        "value": 0,
+        "gpio": 4,
+        "_embedded": {
+          "sensors": {
+            "temperature": {
+              "name": "temperature sensor",
+              "unit": "celsius",
+              "_links": {
+                "self": "/pi/resources/temperature"
+              }
+            },
+            "pressure": {
+              "name": "pressure sensor",
+              "unit": "hPa",
+              "_links": {
+                "self": "/pi/resources/pressure"
+              }
+            },
+            "lux": {
+              "name": "luminosity sensor",
+              "unit": "lux",
+              "_links": {
+                "self": "/pi/resources/lux"
+              }
+            }
+          }
+        }
+      },
+      "pressure": {
+        "_links": {
+          "self": "/pi/resources/pressure",
+          "resources": "/pi/resources"
+        },
+        "name": "pressure sensor",
+        "description": "pressure sensor, measured in hPa",
+        "unit": "hPa",
+        "value": 0,
+        "address": "0x77",
+        "_embedded": {
+          "sensors": {
+            "temperature": {
+              "name": "temperature sensor",
+              "unit": "celsius",
+              "_links": {
+                "self": "/pi/resources/temperature"
+              }
+            },
+            "humidity": {
+              "name": "humidity sensor",
+              "unit": "%",
+              "_links": {
+                "self": "/pi/resources/humidity"
+              }
+            },
+            "lux": {
+              "name": "luminosity sensor",
+              "unit": "lux",
+              "_links": {
+                "self": "/pi/resources/lux"
+              }
+            }
+          }
+        }
+      },
+      "lux": {
+        "_links": {
+          "self": "/pi/resources/lux",
+          "resources": "/pi/resources"
+        },
+        "name": "luminosity sensor",
+        "description": "A luminosity sensor, measured in lux",
+        "unit": "lux",
+        "value": 0,
+        "address": "0x39",
+        "_embedded": {
+          "sensors": {
+            "temperature": {
+              "name": "temperature sensor",
+              "unit": "celsius",
+              "_links": {
+                "self": "/pi/resources/temperature"
+              }
+            },
+            "humidity": {
+              "name": "humidity sensor",
+              "unit": "%",
+              "_links": {
+                "self": "/pi/resources/humidity"
+              }
+            },
+            "pressure": {
+              "name": "pressure sensor",
+              "unit": "hPa",
+              "_links": {
+                "self": "/pi/resources/pressure"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

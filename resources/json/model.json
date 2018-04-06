@@ -1,0 +1,39 @@
+{
+    "model": {
+        "name": "Raspberry Pi reading sensors: pressure, humidity, temperature, and luminosity",
+        "properties": {
+            "temperature": {
+                "name": "temperature sensor",
+                "unit": "celsius",
+                "_links": {
+                    "self": "/pi/resources/temperature",
+                    "subscribe": "/pi/resources/temperature/subscribe"
+                }
+            },
+            "humidity": {
+                "name": "humidity sensor",
+                "unit": "%",
+                "_links": {
+                    "self": "/pi/resources/humidity",
+                    "subscribe": "/pi/resources/humidity/subscribe"
+                }
+            },
+            "pressure": {
+                "name": "pressure sensor",
+                "unit": "hPa",
+                "_links": {
+                    "self": "/pi/resources/pressure",
+                    "subscribe": "/pi/resources/pressure/subscribe"
+                }
+            },
+            "lux": {
+                "name": "luminosity sensor",
+                "unit": "lux",
+                "_links": {
+                    "self": "/pi/resources/lux",
+                    "subscribe": "/pi/resources/lux/subscribe"
+                }
+            }
+        }
+    }
+}

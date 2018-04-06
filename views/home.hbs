@@ -1,0 +1,42 @@
+<div class="container">
+    <h1>Sensor Board</h1>
+    <h4>Welcome to my weather station! This weather station is collecting data from sensors connected to my Raspberry Pi. It's
+        located indoors to help track the condition for my indoor plants.
+    </h4>
+    <p>Sensors are updated every 30 seconds</p>
+
+
+
+<table class="table">
+    <thead>
+        <th>sensor</th>
+        <th>value</th>
+        <th>Unit</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Temperature</td>
+            <td id="temperature">{{sensors.temperature.value}}</td>
+            <td>Celsius</td>
+        </tr>
+        <tr>
+            <td>Humidity</td>
+            <td id="humidity">{{sensors.humidity.value}}</td>
+            <td>%</td>
+        </tr>
+        <tr>
+            <td>Pressure</td>
+            <td id="pressure">{{sensors.pressure.value}}</td>
+            <td>hPa</td>
+        </tr>
+        <tr>
+            <td>luminosity</td>
+            <td id="lux">{{sensors.lux.value}}</td>
+            <td>lux</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/scripts/socket.js"></script>
